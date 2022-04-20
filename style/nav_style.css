@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #455a64;
+    padding: 8px 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+}
+
+.navbar_logo {
+    font-size: 28px;
+    color: white;
+}
+.navbar_logo i {
+    color: #d49466;
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-right: 30px;
+    margin: 0;
+}
+.navbar_menu li {
+    padding: 20px;
+    font-size: 28px;
+}
