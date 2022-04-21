@@ -8,8 +8,8 @@ body {
 }
 #container {
     display: flex;
-    color: #384b5e;
-    background: #f3f3f3;
+    color: #6d6e78;
+    background: #f7fcf8;
 }
 ul {
     list-style-type: none;
