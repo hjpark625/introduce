@@ -6,6 +6,7 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 #container {
     display: flex;
     color: #6d6e78;
@@ -109,4 +110,15 @@ h3 {
 .contact_logo i:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+.top_button {
+    margin-top: 50px;
+}
+.top_button a{
+    font-size: 30px;
+    color: white;
+    background-color: #384b5e;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 10px;
 }
