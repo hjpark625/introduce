@@ -29,10 +29,10 @@ a {
 .navbar_menu {
     display: flex;
     list-style: none;
-    padding-right: 30px;
     margin: 0;
 }
 .navbar_menu li {
-    padding: 20px;
+    padding: 1.5rem;
+    justify-content: space-between;
     font-size: 2rem;
 }
