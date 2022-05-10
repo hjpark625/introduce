@@ -1,15 +1,11 @@
 :root {
     scroll-behavior: smooth;
 }
-main {
-    position: relative;
-}
-
 
 /* .top_button {
-    margin-top: 50px;
-}
-.top_button a{
+    position: fixed;
+} */
+/* .top_button a{
     font-size: 30px;
     color: white;
     background-color: #384b5e;
@@ -25,18 +21,18 @@ main {
     right: 1rem;
 }
 
-.top_button__link {
+.top_button_link {
     position: -webkit-sticky;
     position: sticky;
     top: 85vh;
     text-decoration: none;
-    background-color: blue;
+    background-color: #384b5e;
     padding: 1rem;
     color: white;
     font-weight: 700;
     opacity: .3;
 }
 
-.top_button__link:hover {
+.top_button_link:hover {
     opacity: initial;
 }
