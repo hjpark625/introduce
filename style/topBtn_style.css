@@ -18,6 +18,7 @@
     color: white;
     font-weight: 700;
     opacity: .5;
+    cursor: pointer;
 }
 .top_button_link:hover {
     opacity: initial;
