@@ -1,0 +1,39 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+/* .top_button {
+    position: fixed;
+} */
+/* .top_button a{
+    font-size: 30px;
+    color: white;
+    background-color: #384b5e;
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 10px;
+} */
+
+.top_button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 100;
+    display: none;
+}
+
+.top_button_link {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 85vh;
+    text-decoration: none;
+    background-color: #384b5e;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    opacity: .3;
+}
+
+.top_button_link:hover {
+    opacity: initial;
+}

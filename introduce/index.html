@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/nav_style.css">
+    <link rel="stylesheet" href="./style/page_style.css">
+    <link rel="stylesheet" href="./style/topBtn_style.css">
+    <script src="https://kit.fontawesome.com/ad1ca13373.js" crossorigin="anonymous"></script>
+    <script src="./script/main.js" defer></script>
+    <script type="text/javascript"> //우클릭 방지
+        document.oncontextmenu = function(){return false;}
+    </script>
+    <title>Introduce</title>
+</head>
+<body>
+    <!-- 메뉴 패널 구현 -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <a href="#about">WELCOME</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#hobby">Hobby</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="night_day">
+            <input type="checkbox" value="night" onclick="
+                nightDayHandler(this);
+            "
+            />
+            <span class="circle large"></span>
+            <span class="circle small"></span>
+        </div>
+    </nav>
+    <!-- 전체 페이지 -->
+    <div id="container">
+        <div class="profile_sections"> 
+            <!-- about 페이지 -->
+            <div id="about" class="profile">
+                <h1 class="section_title">Front-End <br> HEEJU PARK</h1>
+                <div class="information">
+                    <img class="photo" src="./img/ME.JPG" alt="">
+                    <ul>
+                        <li>이름 : 박희주</li>
+                        <li>나이 : 30</li>
+                        <li>거주지 : 경기도 부천</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- career 페이지 -->
+            <div id="career" class="profile">
+                <h2>CAREER</h2>
+                <div class="career1">
+                    <h3>Army Officer</h3>
+                    <div class="career_info1">
+                        2016.03.01. ~ 2021.11.30.
+                        <p>현재는 무직</p>
+                    </div>
+                </div>
+                <div class="career2">
+                    <h3>Front-End Developer</h3>
+                    <div class="career_info2">
+                        아직은 progressing...
+                        <p>노력중입니다!!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- hobby 페이지 -->
+            <div id="hobby" class="profile">
+                <h2>HOBBY</h2>
+                <div>
+                    <h3>My hobbies are...</h3>
+                    <ul>
+                        <li>유튜브 보기</li>
+                        <li>야구경기 관람</li>
+                        <li>악기 연주(기타)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- contact 페이지 -->
+            <div id="contact" class="profile">
+                <h2>CONTACT</h2>
+                <div class="contact_logo">
+                    <a href="https://github.com/hjpark625" target="_blank" title="https://github.com/hjpark625"><i class="fa-brands fa-github">GITHUB</i></a>
+                    <p id="email" onclick="showMessage()"><i class="fa-solid fa-envelope">GMAIL</i></p>
+                </div>
+            </div>
+            <!-- <div class="top_button">
+                <a href="#about" class="top_button_link">TOP</a>
+            </div> -->
+            <div class="top_button">
+                <button class="top_button_link" onclick="handleScroll()">TOP</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
