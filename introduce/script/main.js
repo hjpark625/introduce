@@ -18,24 +18,28 @@ document.querySelector("input").addEventListener("change", (e) => {
 });
 
 /* 주야 모드 배경전환 구현 */
-let Links = {
-  setColor: function (color) {
-    let alist = document.querySelectorAll("li");
-    let i = 0;
-    while (i < alist.length) {
-      // console.log(alist[i]);
-      alist[i].style.color = color;
-      i++;
-    }
-  },
-};
-
 let Back = {
   setColor: function (color) {
-    document.querySelector("#container").style.color = color;
+    let sections = document.querySelectorAll(".profile");
+    for (let i = 0; i < sections.length; i++) {
+      let item = sections.item(i);
+      item.style.color = color;
+    }
+    // contact_logo i에 대한 색변경
+    let logo = document.querySelectorAll(".contact_logo i");
+    for (let i = 0; i < logo.length; i++) {
+      let item = logo.item(i);
+      item.style.color = color;
+    }
+    // document.querySelectorAll(".profile").style.color = color;
   },
   setBackgroundColor: function (color) {
-    document.querySelector("#container").style.backgroundColor = color;
+    let sections = document.querySelectorAll(".profile");
+    for (let i = 0; i < sections.length; i++) {
+      let item = sections.item(i);
+      item.style.backgroundColor = color;
+    }
+    // document.querySelectorAll(".profile").style.backgroundColor = color;
   },
 };
 
@@ -46,20 +50,18 @@ function nightDayHandler(self) {
     Back.setBackgroundColor("#262e28");
     Back.setColor("#8fc2ae");
     self.value = "day";
-    Links.setColor("#8fc2ae");
   } else {
     Back.setBackgroundColor("#f7fcf8");
     Back.setColor("#6d6e78");
     self.value = "night";
-    Links.setColor("#6d6e78");
   }
 }
 
 /* Back To Top 버튼 */
-window.addEventListener("scroll", handleScroll);
+document.addEventListener("scroll", handleScroll);
 
 let scrollToTopBtn = document.querySelector(".top_button");
-
+// 스크롤 했을 때 일정구간에서 버튼의 등장여부 결정
 function handleScroll() {
   let scrollableHeight =
     document.documentElement.scrollHeight -
@@ -79,7 +81,7 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 
 function scrollToTop() {
   window.scrollTo({
-    top: -95,
+    top: 0,
     behavior: "smooth",
   });
 }

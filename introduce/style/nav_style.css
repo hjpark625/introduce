@@ -1,14 +1,7 @@
-body {
-    margin: 0;
-}
-a {
-    text-decoration: none;
-    color: white;
-}
 .navbar {
     display: flex;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: #455a64;
@@ -17,7 +10,10 @@ a {
     padding-right: 30px;
     padding-bottom: 0;
 }
-
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
 .navbar_logo {
     font-size: 28px;
     color: white;
