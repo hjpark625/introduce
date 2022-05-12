@@ -1,6 +1,3 @@
-:root {
-    scroll-behavior: smooth;
-}
 .top_button {
     position: fixed;
     bottom: 50px;
@@ -9,8 +6,6 @@
     display: none;
 }
 .top_button_link {
-    position: -webkit-sticky;
-    position: sticky;
     top: 85vh;
     text-decoration: none;
     background-color: #9dcdb3;

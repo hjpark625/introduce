@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="./style/nav_style.css">
     <link rel="stylesheet" href="./style/page_style.css">
     <link rel="stylesheet" href="./style/topBtn_style.css">
+    <link rel="stylesheet" href="./style/gallery_style.css">
     <script src="https://kit.fontawesome.com/ad1ca13373.js" crossorigin="anonymous"></script>
     <script src="./script/main.js" defer></script>
     <script type="text/javascript"> //우클릭 방지
@@ -17,13 +18,14 @@
     <nav class="navbar">
         <div class="navbar_logo">
             <i class="fa-solid fa-earth-asia"></i>
-            <a href="#about">WELCOME</a>
+            WELCOME
         </div>
 
         <ul class="navbar_menu">
             <li><a href="#about">About me</a></li>
             <li><a href="#career">Career</a></li>
             <li><a href="#hobby">Hobby</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -73,13 +75,56 @@
             <!-- hobby 페이지 -->
             <div id="hobby" class="profile">
                 <h2>HOBBY</h2>
-                <div>
-                    <h3>My hobbies are...</h3>
-                    <ul>
-                        <li>유튜브 보기</li>
+                <div class="hobby_contents">
+                    <h3 class="hobby_title">My hobbies are...</h3>
+                    <ul class="hobby_lists">
+                        <li>유튜브 보기(다큐멘터리, 게임, 코딩 등)</li>
                         <li>야구경기 관람</li>
                         <li>악기 연주(기타)</li>
                     </ul>
+                </div>
+            </div>
+            <!-- gallery 페이지 -->
+            <div id="gallery" class="profile">
+                <h2>GALLERY</h2>
+                <!-- 사진첩 제작 -->
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="./img/여행1.jpeg" style="width: 50%;">
+                        <div class="text">대학교 졸업 후 첫 일본여행</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="./img/군생활1.jpeg" style="width: 50%;">
+                        <div class="text">포대원들과 풋살 종료 후</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="./img/포대장 이취임식.jpeg" style="width: 50%;">
+                        <div class="text">포대장 이취임식 포대기 이양</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="./img/이취임식 단체.jpeg" style="width: 50%;">
+                        <div class="text">이취임식 종료 후 마지막 단체 사진</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="./img/군생활2.jpeg" style="width: 50%;">
+                        <div class="text">연합훈련 종료 직전 미군병사와 함께</div>
+                    </div>
+                </div>
+                <br>
+                <!-- 좌우 버튼 및 점 표시 -->
+                <div class="dot_button" style="text-align: center;">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;PREV</a>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <a class="next" onclick="plusSlides(1)">NEXT&#10095;</a>
                 </div>
             </div>
             <!-- contact 페이지 -->

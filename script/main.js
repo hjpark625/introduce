@@ -62,7 +62,7 @@ document.addEventListener("scroll", handleScroll);
 
 let scrollToTopBtn = document.querySelector(".top_button");
 // 스크롤 했을 때 일정구간에서 버튼의 등장여부 결정
-function handleScroll() {
+/* function handleScroll() {
   let scrollableHeight =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
@@ -75,13 +75,63 @@ function handleScroll() {
     // 버튼을 숨기기
     scrollToTopBtn.style.display = "none";
   }
+} */
+// 스크롤 했을 때 일정구간에서 버튼의 등장여부 결정 (더 깔끔한 코드)
+function handleScroll() {
+  if (
+    document.body.scrollTop > 650 || // Safari에서 작동
+    document.documentElement.scrollTop > 650 // 그 외 브라우저에서 작동
+  ) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
 }
 
 scrollToTopBtn.addEventListener("click", scrollToTop);
-
 function scrollToTop() {
-  window.scrollTo({
+  // Safari에서 작동
+  document.body.scrollTo({
     top: 0,
-    behavior: "smooth",
+    // behavior: "smooth", 이미 CSS에서 :root로 선언해 활용 중
   });
+  // 그외 브라우저에서 작동
+  document.documentElement.scrollTo({
+    top: 0,
+    // behavior: "smooth", 이미 CSS에서 :root로 선언해 활용 중
+  });
+}
+
+/* 갤러리 슬라이드 기능 구현 */
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
