@@ -106,12 +106,12 @@ function scrollToTop() {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+// 다음이전 버튼 컨트롤
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
+// 썸네일 이미지 컨트롤
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
