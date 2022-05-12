@@ -31,6 +31,24 @@ let Back = {
       let item = logo.item(i);
       item.style.color = color;
     }
+    // gallery button에 대한 색 변경
+    let button = document.querySelectorAll(".dot_button a");
+    for (let i = 0; i < button.length; i++) {
+      let item = button.item(i);
+      item.style.color = color;
+    }
+    // gallery textnumber에 대한 색 변경
+    let txtNumber = document.querySelectorAll(".numbertext");
+    for (let i = 0; i < txtNumber.length; i++) {
+      let item = txtNumber.item(i);
+      item.style.color = color;
+    }
+    // gallery text에 대한 색 변경
+    let text = document.querySelectorAll(".text");
+    for (let i = 0; i < text.length; i++) {
+      let item = text.item(i);
+      item.style.color = color;
+    }
     // document.querySelectorAll(".profile").style.color = color;
   },
   setBackgroundColor: function (color) {

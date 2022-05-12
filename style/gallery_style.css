@@ -1,3 +1,4 @@
+/* 코드참고 : https://www.w3schools.com/howto/howto_js_slideshow.asp */
 img {
   vertical-align: middle;
 }
@@ -45,7 +46,7 @@ img {
   
 /* Caption text */
 .text {
-  color: white;
+  color: #6d6e78;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
