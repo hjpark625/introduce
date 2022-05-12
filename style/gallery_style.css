@@ -54,6 +54,12 @@ img {
   width: 100%;
   text-align: center;
 }
+/* 글씨가 사진 배경에 안보일때 호버를 통해 시인성 향상 */
+.text:hover {
+  font-weight: bold;
+  font-size: 2rem;
+  color: greenyellow;
+}
   
 /* Number text (1/3 etc) */
 .numbertext {
