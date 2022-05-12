@@ -43,12 +43,12 @@ let Back = {
       let item = txtNumber.item(i);
       item.style.color = color;
     }
-    // gallery text에 대한 색 변경
-    let text = document.querySelectorAll(".text");
-    for (let i = 0; i < text.length; i++) {
-      let item = text.item(i);
-      item.style.color = color;
-    }
+    // gallery text에 대한 색 변경(사진에 고정되어 불필요)
+    // let text = document.querySelectorAll(".text");
+    // for (let i = 0; i < text.length; i++) {
+    //   let item = text.item(i);
+    //   item.style.color = color;
+    // }
     // document.querySelectorAll(".profile").style.color = color;
   },
   setBackgroundColor: function (color) {
@@ -60,6 +60,16 @@ let Back = {
     // document.querySelectorAll(".profile").style.backgroundColor = color;
   },
 };
+// 사진 내 텍스트 색 변경(사진에 고정되어 불필요)
+// let TXT = {
+//   setColor: function (color) {
+//     let text = document.querySelectorAll(".text");
+//     for (let i = 0; i < text.length; i++) {
+//       let item = text.item(i);
+//       item.style.color = color;
+//     }
+//   },
+// };
 
 /* 주야모드 실행함수 */
 function nightDayHandler(self) {
@@ -67,10 +77,12 @@ function nightDayHandler(self) {
   if (self.value === "night") {
     Back.setBackgroundColor("#262e28");
     Back.setColor("#8fc2ae");
+    // TXT.setColor("#8fc2ae");
     self.value = "day";
   } else {
     Back.setBackgroundColor("#f7fcf8");
     Back.setColor("#6d6e78");
+    // TXT.setColor("white");
     self.value = "night";
   }
 }
