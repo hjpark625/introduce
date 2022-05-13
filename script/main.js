@@ -145,7 +145,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
-
+// 슬라이드 구현 함수
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
